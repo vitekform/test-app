@@ -28,7 +28,7 @@ export default function LockerScreen() {
     function setCollection(findex) {
         setConditionalContent(secondaryCollections[findex].map((content, index) => (
             <TouchableOpacity key={index} onPress={() => setSecondaryCollection(findex, index)}>
-                <MediaDownloader src={content} type="image" style={styles.media} />
+                <MediaDownloader src={content} type="image" style={{width: 50, height: 50, marginTop: 10}} />
             </TouchableOpacity>
         )));
     }
@@ -157,8 +157,6 @@ const styles = StyleSheet.create({
         width: '80%',
     },
     media: {
-        width: 50,
-        height: 50,
         marginTop: 20,
     },
 });

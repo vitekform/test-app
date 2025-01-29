@@ -9,7 +9,7 @@ export default function MediaDownloader({ src, type, style }) {
     useEffect(() => {
         async function downloadMedia() {
             const fileName = src.split('/').pop();
-            const localFilePath = `${FileSystem.documentDirectory}${fileName}`;
+            const localFilePath = `${FileSystem.cacheDirectory}${fileName}`;
 
             try {
                 const downloadResult = await FileSystem.downloadAsync(src, localFilePath);
